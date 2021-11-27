@@ -22,6 +22,18 @@ public class CityList {
         cities.add(city);
     }
 
+
+    /**
+     * This returns the number of cities
+     * @return
+     *      returns the count of array list elements
+     */
+
+    public int Count(){
+        return cities.size();
+
+    }
+
     /**
      * This deletes a city from the list if it exists, else throws exception
      * @param city
@@ -30,10 +42,10 @@ public class CityList {
 
     public void delete(City city){
         if (cities.contains(city)){
-            cities.remove(city);
+            cities.remove(0);
         }
-        else{
-            throw new IllegalArgumentException();
+       else{
+           throw new IllegalArgumentException();
         }
     }
 

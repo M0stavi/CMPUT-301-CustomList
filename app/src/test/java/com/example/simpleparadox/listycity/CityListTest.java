@@ -13,8 +13,29 @@ class CityListTest {
         return cityList;
     }
 
+    private CityList mockCityList2() {
+        CityList cityList = new CityList();
+        cityList.add(mockCity());
+        cityList.delete(mockCity());
+        return cityList;
+    }
+
     private City mockCity() {
         return new City("Edmonton", "Alberta");
+    }
+
+    @Test
+    void testdelete() {
+        CityList cityList = mockCityList2();
+
+        assertEquals(0, cityList.getCities().size());
+
+        City city = new City("Regina", "Saskatchewan");
+        cityList.add(city);
+
+        assertEquals(1, cityList.getCities().size());
+        assertTrue(cityList.getCities().contains(city));
+
     }
 
     @Test
