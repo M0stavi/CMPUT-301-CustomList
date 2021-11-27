@@ -41,12 +41,15 @@ public class CityList {
      */
 
     public void delete(City city){
-        if (cities.contains(city)){
+
+        try{
             cities.remove(city);
         }
-       //else{
-         //  throw new IllegalArgumentException();
-        //}
+        catch (Exception exp){
+            System.out.println("Exception : " + exp.toString() );
+        }
+
+
     }
 
     /**
