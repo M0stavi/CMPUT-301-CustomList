@@ -15,7 +15,7 @@ class CityListTest {
 
     private CityList mockCityList2() {
         CityList cityList = new CityList();
-        cityList.add(mockCity());
+
         cityList.delete(mockCity());
         return cityList;
     }
@@ -34,8 +34,8 @@ class CityListTest {
 
     @Test
     void testdelete() {
-        CityList cityList = mockCityList2();
-
+        CityList cityList = mockCityList();
+        cityList = mockCityList2();
         assertEquals(0, cityList.Count());
 
         City city = new City("Regina", "Saskatchewan");

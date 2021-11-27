@@ -44,9 +44,9 @@ public class CityList {
         if (cities.contains(city)){
             cities.remove(city);
         }
-       else{
-           throw new IllegalArgumentException();
-        }
+       //else{
+         //  throw new IllegalArgumentException();
+        //}
     }
 
     /**
