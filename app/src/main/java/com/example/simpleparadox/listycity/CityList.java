@@ -42,7 +42,7 @@ public class CityList {
 
     public void delete(City city){
         if (cities.contains(city)){
-            cities.remove(0);
+            cities.remove(city);
         }
        else{
            throw new IllegalArgumentException();

@@ -25,15 +25,23 @@ class CityListTest {
     }
 
     @Test
+
+    void testCount() {
+        CityList cityList = mockCityList();
+
+        assertEquals(1, cityList.Count());
+    }
+
+    @Test
     void testdelete() {
         CityList cityList = mockCityList2();
 
-        assertEquals(0, cityList.getCities().size());
+        assertEquals(0, cityList.Count());
 
         City city = new City("Regina", "Saskatchewan");
         cityList.add(city);
 
-        assertEquals(1, cityList.getCities().size());
+        assertEquals(1, cityList.Count());
         assertTrue(cityList.getCities().contains(city));
 
     }
