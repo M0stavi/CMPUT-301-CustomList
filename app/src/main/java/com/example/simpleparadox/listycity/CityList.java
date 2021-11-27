@@ -23,6 +23,21 @@ public class CityList {
     }
 
     /**
+     * This deletes a city from the list if it exists, else throws exception
+     * @param city
+     *       This is a candidate city to delete
+     */
+
+    public void delete(City city){
+        if (cities.contains(city)){
+            cities.remove(city);
+        }
+        else{
+            throw new IllegalArgumentException();
+        }
+    }
+
+    /**
      * This returns a sorted list of cities
      * @return
      *      Return the sorted list
